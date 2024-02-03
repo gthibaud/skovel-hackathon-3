@@ -1,0 +1,1 @@
+For now, these fonts are not used. They are downloaded from a CDN (used in `./fonts.css`) which is not recommended for production (we don't have a contract with them). We should download them and use them locally.

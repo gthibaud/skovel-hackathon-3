@@ -1,93 +1,64 @@
-import Image from 'next/image';
-import styles from './page.module.css';
+import { MenuItem, Select } from '@mui/material';
+import Link from 'next/link';
+import './page.css';
 
 export default function Home() {
     return (
-        <main className={styles.main}>
-            <div className={styles.description}>
-                <p>
-                    Get started by editing&nbsp;
-                    <code className={styles.code}>hello</code>
-                </p>
-                <div>
-                    <a
-                        href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        By{' '}
-                        <Image
-                            src="/vercel.svg"
-                            alt="Vercel Logo"
-                            className={styles.vercelLogo}
-                            width={100}
-                            height={24}
-                            priority
-                        />
-                    </a>
+        <body>
+            <menu className='menu-container'>
+                <div className='menu-card' data-tilt data-tilt-max="2" data-tilt-axis="x" data-tilt-speed="400" data-tilt-scale="1.01" data-tilt-perspective="500">
+                    <img src="capybarace-logo.png" alt="Logo" />
+                    <h2>Capybarace</h2>
+                    <Select value={10} fullWidth>
+                        <MenuItem value={10}>2024</MenuItem>
+                        <MenuItem value={11}>2022</MenuItem>
+                        <MenuItem value={12}>2021</MenuItem>
+                    </Select>
+                    <Link href="/">
+                        Home
+                    </Link>
+                    <Link href="/events">
+                        Events
+                    </Link>
+                    <Link href="/race">
+                        The race
+                    </Link>
+                    <Link href="/infos">
+                        Infos
+                    </Link>
+                    <Link href="/register">
+                        Register
+                    </Link>
                 </div>
-            </div>
-
-            <div className={styles.center}>
-                <Image
-                    className={styles.logo}
-                    src="/next.svg"
-                    alt="Next.js Logo"
-                    width={180}
-                    height={37}
-                    priority
-                />
-            </div>
-
-            <div className={styles.grid}>
-                <a
-                    href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-                    className={styles.card}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <h2>
-                        Docs <span>-&gt;</span>
-                    </h2>
-                    <p>Find in-depth information about Next.js features and API.</p>
-                </a>
-
-                <a
-                    href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-                    className={styles.card}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <h2>
-                        Learn <span>-&gt;</span>
-                    </h2>
-                    <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-                </a>
-
-                <a
-                    href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-                    className={styles.card}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <h2>
-                        Templates <span>-&gt;</span>
-                    </h2>
-                    <p>Explore starter templates for Next.js.</p>
-                </a>
-
-                <a
-                    href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-                    className={styles.card}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <h2>
-                        Deploy <span>-&gt;</span>
-                    </h2>
-                    <p>Instantly deploy your Next.js site to a shareable URL with Vercel.</p>
-                </a>
-            </div>
-        </main>
+            </menu>
+            <main>
+                <header>
+                    <h1>CapybaRace 2024</h1>
+                </header>
+                <img src="banner.jpeg" alt="Banner image" className='banner-image' />
+                <p className='presentation'>A unique 200Km trail in the wild.</p>
+                <p className='date'>Starting 24/08/2024 in Mulhouse (68)</p>
+                <div className='actions'>
+                    <Link href={"/register"} className='action register'>Register</Link>
+                    <Link href={"/infos"} className='action'>More infos</Link>
+                </div>
+                <div className='bento'>
+                    <div className='bento-card'>
+                        <h3>Infos</h3>
+                        <p>Starting: <b>24/08/2024 - 10h</b></p>
+                        <p>Price: <b>150€</b></p>
+                        <p>Distance: <b>200Km</b></p>
+                        <p>Duration: <b>3 days</b></p>
+                        <p>Difficulty: <b>Hard</b></p>
+                        <Link href="/infos">More infos</Link>
+                    </div>
+                    <div className='bento-card'>
+                        <h3>Location</h3>
+                        <img src="map.png" alt="Map" />
+                    </div>
+                </div>
+            </main>
+            {/* <script type="text/javascript" src="vanilla-tilt.js"></script> */}
+        </body>
     );
-}
+};
