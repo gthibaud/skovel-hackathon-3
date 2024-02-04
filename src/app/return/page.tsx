@@ -16,7 +16,7 @@ export default function Return() {
         const sessionId = urlParams.get('session_id');
 
         fetch(`/api/checkout_sessions?session_id=${sessionId}`, {
-            method: "GET",
+            method: 'GET',
         })
             .then((res) => res.json())
             .then((data) => {
@@ -54,7 +54,7 @@ export default function Return() {
                         <h3>Votre paiement a bien été enregistré</h3>
                         <p>Price: <b>150€</b></p>
                         <p>Email: <b>{customerEmail}</b></p>
-                        <p>N'oubliez pas de nous transmettre votre certificat médical !</p>
+                        <p>N&apos;oubliez pas de nous transmettre votre certificat médical !</p>
                     </div>
                 </div>
             </main>

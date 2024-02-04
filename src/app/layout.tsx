@@ -90,7 +90,7 @@ export default function RootLayout({
                 );
                 break;
         }
-    }, [prefersDarkMode, settings.themePreference]);
+    }, [prefersDarkMode, settings.themePreference, settings.direction]);
 
     return (
         <QueryClientProvider client={queryClient}>

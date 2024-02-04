@@ -1,51 +1,25 @@
-import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
-import {
-    getFirestore,
-    initializeFirestore,
-    persistentLocalCache,
-    persistentMultipleTabManager,
-} from 'firebase/firestore';
-import { getStorage } from 'firebase/storage';
+// Import the functions you need from the SDKs you need
+import { getAnalytics } from "firebase/analytics";
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getStorage } from "firebase/storage";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: 'AIzaSyAYDRtCU2Y6dcoq6DVZ-TOAoXHNDeclRog',
-    authDomain: 'skovel-prod.firebaseapp.com',
-    projectId: 'skovel-prod',
-    storageBucket: 'skovel-prod.appspot.com',
-    messagingSenderId: '674601598209',
-    appId: '1:674601598209:web:1b6d0ad05c92e4c8092f00',
-    measurementId: 'G-1H0T6V6Z7G',
+    apiKey: "AIzaSyBCkTsp-VTbz9WVR7r4QQoiO7U7VOIfuxg",
+    authDomain: "skovel-hackathon-3.firebaseapp.com",
+    projectId: "skovel-hackathon-3",
+    storageBucket: "skovel-hackathon-3.appspot.com",
+    messagingSenderId: "930907490170",
+    appId: "1:930907490170:web:4a0fc20d2bc1613c6fb8c3",
+    measurementId: "G-VCWXD10RJ2"
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
-if (typeof window !== 'undefined') {
-    initializeFirestore(app, {
-        localCache: persistentLocalCache(/*settings*/ { tabManager: persistentMultipleTabManager() }),
-    });
-}
-
-export const db = getFirestore(app);
-export const storage = getStorage(app);
+export const app = initializeApp(firebaseConfig);
+export const analytics = getAnalytics(app);
 export const auth = getAuth(app);
-// export const functions = getFunctions(app, 'europe-west3');
-
-// export const messaging = getMessaging(app);
-// export const messagingToken = getToken(messaging, {
-//     vapidKey: "BHR5mOGu14KGUEeikCy-Wizgf482F66M6XMKYxgJaMzFSCw_Edt5-qbwhq-FqH1MGHPzaiGH-HThYYtpy_JLLcs"
-// })
-
-// export const remoteConfig = getRemoteConfig(app);
-
-// if (typeof window !== 'undefined') {
-
-//     remoteConfig.settings.minimumFetchIntervalMillis = 3600000;
-//     remoteConfig.defaultConfig = {
-//         startDate: '1683961200',
-//         timestampOffset: '0',
-//         benjiMaprogressID: 'todo',
-//         finishDate: '1684746000',
-//     };
-// }
+export const storage = getStorage(app);

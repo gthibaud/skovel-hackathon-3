@@ -7,7 +7,7 @@ export const Navbar = () => {
         <menu className='menu-container'>
             <div className='menu-card' data-tilt data-tilt-max="2" data-tilt-axis="x" data-tilt-speed="400" data-tilt-scale="1.01" data-tilt-perspective="500">
                 <Link href={"/"}>
-                    <img src="capybarace-logo.png" alt="Logo" />
+                    <img src="/capybarace-logo.png" alt="Logo" />
                     <h2>Capybarace</h2>
                 </Link>
                 <Select value={10} fullWidth>
