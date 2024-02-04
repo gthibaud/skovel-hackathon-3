@@ -1,37 +1,35 @@
 'use client'
 
-import Link from 'next/link';
+import { auth } from '@/api/firebase';
+import { Login } from '@/components/Login';
+import { UserInfos } from '@/components/UserInfos';
+import { User } from 'firebase/auth';
+import { useEffect, useState } from 'react';
 import './styles.css';
 
 export default function Account() {
+    const [user, setUser] = useState<User | null>(null);
+
+    useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged((u) => {
+            if (u) {
+                console.log('User is logged in');
+                setUser(u);
+            } else {
+                console.log('User is logged out');
+                setUser(null);
+            }
+        });
+        return unsubscribe;
+    }, []);
+
     return (
         <main>
             <header>
-                <h1>Register</h1>
+                <h1>{user ? 'User account' : 'Login'}</h1>
+                <br />
             </header>
-            <div className='already-registered'>
-                <p>Already registered?</p>
-                <Link href={"/account"} className='action register'>View my account</Link>
-            </div>
-            <form>
-                <div className='form-group'>
-                    <label htmlFor='email'>Email</label>
-                    <input type='email' id='email' name='email' required />
-                </div>
-                <div className='form-group'>
-                    <label htmlFor='password'>Password</label>
-                    <input type='password' id='password' name='password' required />
-                </div>
-                <div className='form-group'>
-                    <label htmlFor='password'>Confirm Password</label>
-                    <input type='password' id='password' name='password' required />
-                </div>
-                <div className='form-group'>
-                    <button type='submit'>Register</button>
-                </div>
-            </form>
-            <div id="checkout">
-            </div>
+            {user ? <UserInfos user={user} /> : <Login />}
         </main>
     );
 };
