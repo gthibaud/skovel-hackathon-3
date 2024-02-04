@@ -1,11 +1,33 @@
+'use client';
+
+import { db } from '@/api/firebase';
+import { doc, getDoc } from 'firebase/firestore';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import './page.css';
 
 export default function Home() {
+    const [raceName, setRaceName] = useState('');
+
+    useEffect(() => {
+        const docRef = doc(db, 'races', 'GekA3snByurjvyh0bG6H');
+        getDoc(docRef)
+            .then((doc) => {
+                if (doc.exists()) {
+                    setRaceName(doc.data().name);
+                } else {
+                    console.log('No such document!');
+                }
+            })
+            .catch((error) => {
+                console.log('Error getting document:', error);
+            });
+    }, []);
+
     return (
         <main>
             <header>
-                <h1>CapybaRace 2024</h1>
+                <h1>{raceName} 2024</h1>
             </header>
             <img
                 src="banner.jpeg"
