@@ -1,0 +1,63 @@
+.already-registered {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.action {
+    padding: 12px 24px;
+    border-radius: 12px;
+    background-color: #952BFF;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 200ms;
+
+    &:hover {
+        background-color: #952BFFaa;
+    }
+}
+
+.register {
+    background-color: #95ff2b;
+    color: black;
+
+    &:hover {
+        background-color: #95ff2baa;
+    }
+
+}
+
+.bento {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.bento-card {
+    background-color: #ffffffee;
+    backdrop-filter: blur(24px);
+    border-radius: 12px;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
+    padding: 22px;
+    border: 1px solid rgb(227, 227, 227);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    transition: all 200ms;
+
+    &:hover {
+        box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    img {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+}

@@ -11,6 +11,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Inter } from 'next/font/google';
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import { Navbar } from '../../library/components/Navbar';
 import { mergeObjects } from '../../library/utils/partialObjects';
 import './globals.css';
 
@@ -99,7 +100,10 @@ export default function RootLayout({
                         theme={mergeObjects(themeBase, currentTheme)}
                     >
                         <html lang="en">
-                            <body className={inter.className}>{children}</body>
+                            <body className={inter.className}>
+                                <Navbar />
+                                {children}
+                            </body>
                         </html>
                     </ThemeProvider>
                 </ThemeProviderMUI>
