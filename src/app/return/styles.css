@@ -7,7 +7,7 @@
 .action {
     padding: 12px 24px;
     border-radius: 12px;
-    background-color: #952BFF;
+    background-color: #952bff;
     color: white;
     font-weight: 600;
     text-transform: uppercase;
@@ -15,7 +15,7 @@
     transition: background-color 200ms;
 
     &:hover {
-        background-color: #952BFFaa;
+        background-color: #952bffaa;
     }
 }
 
@@ -26,7 +26,6 @@
     &:hover {
         background-color: #95ff2baa;
     }
-
 }
 
 .bento {

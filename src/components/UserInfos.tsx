@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { auth } from '@/api/firebase';
 import { User } from 'firebase/auth';
@@ -14,7 +14,7 @@ export const UserInfos: FC<UserProps> = (props) => {
 
     const logout = () => {
         auth.signOut();
-    }
+    };
 
     return (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>

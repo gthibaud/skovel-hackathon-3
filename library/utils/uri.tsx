@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams } from 'react-router-dom';
 
 /**
  * Generates a URL with the given parameters
@@ -56,4 +56,4 @@ export const getThirdLastPathSegment = (url: string): string => {
 export const url = (path: string): string => {
     const { workspaceId, environmentId } = useParams();
     return `${workspaceId}/${path}`;
-}
+};

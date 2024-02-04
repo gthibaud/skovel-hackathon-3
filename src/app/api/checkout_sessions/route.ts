@@ -4,12 +4,13 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 export async function GET(request: Request) {
     try {
-        const session =
-            await stripe.checkout.sessions.retrieve(new URL(request.url).searchParams.get('session_id'));
+        const session = await stripe.checkout.sessions.retrieve(
+            new URL(request.url).searchParams.get('session_id'),
+        );
 
         return Response.json({
             status: session.status,
-            customer_email: session.customer_details.email
+            customer_email: session.customer_details.email,
         });
     } catch (err: any) {
         console.error(err);

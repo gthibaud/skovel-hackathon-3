@@ -319,7 +319,10 @@ export const Icon = ({
                         </g>
                         <defs>
                             <clipPath id="clip0">
-                                <rect width="20" height="20" />
+                                <rect
+                                    width="20"
+                                    height="20"
+                                />
                             </clipPath>
                         </defs>
                     </>
@@ -475,7 +478,13 @@ export const Icon = ({
     };
 
     return (
-        <svg width={size} height={size} viewBox={`0 0 20 20`} fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg
+            width={size}
+            height={size}
+            viewBox={`0 0 20 20`}
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
             {path()}
         </svg>
     );

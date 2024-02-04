@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { auth, db } from '@/api/firebase';
 import { TextField } from '@mui/material';
@@ -28,13 +28,13 @@ export const Signin = () => {
 
         createUserWithEmailAndPassword(auth, email, password)
             .then((u) => {
-                const docRef = doc(db, "users", u.user.uid);
+                const docRef = doc(db, 'users', u.user.uid);
                 setDoc(docRef, {
                     name: name,
                     registered: false,
                 });
             })
-            .catch(error => {
+            .catch((error) => {
                 setLoginMessage(error.message);
             })
             .finally(() => {
@@ -43,7 +43,7 @@ export const Signin = () => {
     };
 
     return (
-        <form style={{ display: 'flex', gap: "8px", flexDirection: "column" }} >
+        <form style={{ display: 'flex', gap: '8px', flexDirection: 'column' }}>
             <TextField
                 type="text"
                 label="Enter your Name"
@@ -69,7 +69,10 @@ export const Signin = () => {
                 required
             />
             {loginMessage && (
-                <div className="alert alert-danger" role="alert">
+                <div
+                    className="alert alert-danger"
+                    role="alert"
+                >
                     <span
                         className="glyphicon glyphicon-exclamation-sign"
                         aria-hidden="true"
@@ -78,9 +81,16 @@ export const Signin = () => {
                     &nbsp;{loginMessage}{' '}
                 </div>
             )}
-            <div style={{ display: 'flex', gap: "8px", flexDirection: "row", alignItems: 'center' }} >
-                <Button onClick={handleSubmit} isLoading={loading} >Create account</Button>
-                <Link href={"/account"}>I already have an account</Link>
+            <div
+                style={{ display: 'flex', gap: '8px', flexDirection: 'row', alignItems: 'center' }}
+            >
+                <Button
+                    onClick={handleSubmit}
+                    isLoading={loading}
+                >
+                    Create account
+                </Button>
+                <Link href={'/account'}>I already have an account</Link>
             </div>
         </form>
     );

@@ -92,8 +92,8 @@ export const HeaderLargeLayout: FC<HeaderProps> = (props) => {
                 borderBottomColor: pageContext.showDivider
                     ? `${theme.colors.divider.primary}FF`
                     : isScrollOnTop
-                        ? `${theme.colors.divider.primary}00`
-                        : `${theme.colors.divider.primary}FF`,
+                      ? `${theme.colors.divider.primary}00`
+                      : `${theme.colors.divider.primary}FF`,
                 transition: 'border-bottom 0.2s ease-in-out',
                 padding: 'calc(env(safe-area-inset-top) + 8px) 8px 8px 12px', // The safe-area-inset-top is used in PWA mode to avoid the toolbar of the device to hide the header
             }}

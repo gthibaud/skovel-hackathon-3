@@ -8,11 +8,27 @@ interface LogoProps {
     height?: number;
 }
 
-export const Logo: FC<LogoProps> = ({ text = true, icon = true, light = false, width = 512, height = 512 }) => {
+export const Logo: FC<LogoProps> = ({
+    text = true,
+    icon = true,
+    light = false,
+    width = 512,
+    height = 512,
+}) => {
     if (text && icon && light) {
         return (
-            <svg width={width} height={height} viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="512" height="512" fill="#0F1F37" />
+            <svg
+                width={width}
+                height={height}
+                viewBox="0 0 512 512"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <rect
+                    width="512"
+                    height="512"
+                    fill="#0F1F37"
+                />
                 <g clipPath="url(#clip0_1_2)">
                     <path
                         d="M422 421.982V402.471H365.549V171.936C365.549 152.843 359.058 135.239 348.174 121.208C363.926 118.97 376.08 105.402 376.08 89.041H356.569C356.569 96.2011 350.743 102.027 343.583 102.027H333.881C331.744 102.027 329.625 102.103 327.526 102.254C314.578 93.8831 299.163 89.0175 282.631 89.0175H228.359C211.828 89.0175 196.412 93.8831 183.465 102.254C181.365 102.103 179.246 102.027 177.109 102.027H167.407C160.247 102.027 154.421 96.2011 154.421 89.041H134.91C134.91 105.402 147.064 118.97 162.817 121.208C151.931 135.239 145.441 152.843 145.441 171.936V267.601C145.441 308.838 161.499 347.607 190.658 376.765C200.882 386.989 212.291 395.595 224.57 402.471H89V421.982H422ZM346.037 357.756C331.762 353.537 321.313 340.315 321.313 324.691V307.691H301.801V324.691C301.801 351.129 320.909 373.176 346.037 377.782V401.858C307.933 397.046 278.368 364.435 278.368 325.046V269.827C306.003 266.637 330.194 251.977 346.037 230.736V357.756ZM228.359 108.529H282.63C287.551 108.529 292.341 109.092 296.942 110.158C279.111 118.424 264.482 132.468 255.495 149.884C246.508 132.468 231.878 118.424 214.047 110.158C218.648 109.092 223.439 108.529 228.359 108.529ZM188.68 122.519C221.032 128.035 245.739 156.269 245.739 190.168V212.826H265.251V190.168C265.251 156.269 289.958 128.035 322.309 122.519C336.766 134.15 346.037 151.979 346.037 171.936C346.037 215.518 310.58 250.975 266.998 250.975H243.992C200.409 250.975 164.953 215.518 164.953 171.936C164.953 151.979 174.223 134.15 188.68 122.519ZM164.953 267.601V230.736C182.935 254.846 211.671 270.486 243.992 270.486H258.857V325.046C258.857 356.63 274.043 384.732 297.494 402.441C224.197 401.193 164.953 341.19 164.953 267.601Z"
@@ -29,7 +45,12 @@ export const Logo: FC<LogoProps> = ({ text = true, icon = true, light = false, w
                 </g>
                 <defs>
                     <clipPath id="clip0_1_2">
-                        <rect width="333" height="333" fill="white" transform="translate(89 89)" />
+                        <rect
+                            width="333"
+                            height="333"
+                            fill="white"
+                            transform="translate(89 89)"
+                        />
                     </clipPath>
                 </defs>
             </svg>
@@ -38,7 +59,13 @@ export const Logo: FC<LogoProps> = ({ text = true, icon = true, light = false, w
 
     if (text && icon && !light) {
         return (
-            <svg width={width} height={height} viewBox="0 0 2451 534" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg
+                width={width}
+                height={height}
+                viewBox="0 0 2451 534"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
                 <g clipPath="url(#clip0_849_1461)">
                     <path
                         d="M153.733 502.139C177.22 502.139 198.571 498.353 218.322 490.781C237.538 483.209 254.086 471.311 267.965 455.627C281.843 440.483 292.519 421.013 299.992 397.757C307.465 374.501 311.202 347.459 311.202 316.631C311.202 282.558 306.932 253.353 298.925 229.556C290.384 205.759 279.708 186.83 265.83 171.686C251.951 157.084 235.403 146.267 217.254 139.777C199.105 133.287 179.889 129.501 160.138 129.501C140.922 129.501 122.239 132.746 103.022 139.236C83.8057 145.726 66.1905 156.543 51.2442 171.146C36.298 186.289 24.0207 205.218 14.4124 229.015C4.80415 252.812 0 282.018 0 316.631C0 377.746 13.3449 423.717 40.5684 455.086C67.7919 486.454 105.691 502.139 153.733 502.139ZM158.003 438.32C141.455 438.32 128.111 434.534 117.435 426.962C106.759 419.39 98.7519 409.115 93.414 397.216C87.5423 385.318 83.8057 372.338 81.6705 357.194C79.5353 342.051 78.4678 327.448 78.4678 313.386C78.4678 298.783 79.5353 284.181 82.2043 269.578C84.8733 255.516 89.1436 242.536 95.5492 231.72C101.955 220.903 109.962 211.709 120.104 204.678C129.712 198.188 141.989 194.402 156.402 194.402C171.348 194.402 184.159 198.728 194.301 206.841C203.909 214.954 211.916 225.229 217.788 237.128C223.66 249.567 227.93 263.088 230.065 277.691C232.2 292.293 233.268 305.814 233.268 318.254C233.268 333.397 231.667 348.541 229.531 362.602C226.863 377.205 222.592 390.185 217.254 401.002C211.383 412.36 203.376 421.554 193.767 428.044C184.159 435.075 171.882 438.32 158.003 438.32Z"
@@ -85,7 +112,10 @@ export const Logo: FC<LogoProps> = ({ text = true, icon = true, light = false, w
                         gradientUnits="userSpaceOnUse"
                     >
                         <stop stopColor="#945FFE" />
-                        <stop offset="1" stopColor="#0079FF" />
+                        <stop
+                            offset="1"
+                            stopColor="#0079FF"
+                        />
                     </linearGradient>
                     <linearGradient
                         id="paint1_linear_849_1461"
@@ -96,7 +126,10 @@ export const Logo: FC<LogoProps> = ({ text = true, icon = true, light = false, w
                         gradientUnits="userSpaceOnUse"
                     >
                         <stop stopColor="#945FFE" />
-                        <stop offset="1" stopColor="#0079FF" />
+                        <stop
+                            offset="1"
+                            stopColor="#0079FF"
+                        />
                     </linearGradient>
                     <linearGradient
                         id="paint2_linear_849_1461"
@@ -107,7 +140,10 @@ export const Logo: FC<LogoProps> = ({ text = true, icon = true, light = false, w
                         gradientUnits="userSpaceOnUse"
                     >
                         <stop stopColor="#945FFE" />
-                        <stop offset="1" stopColor="#0079FF" />
+                        <stop
+                            offset="1"
+                            stopColor="#0079FF"
+                        />
                     </linearGradient>
                     <linearGradient
                         id="paint3_linear_849_1461"
@@ -118,7 +154,10 @@ export const Logo: FC<LogoProps> = ({ text = true, icon = true, light = false, w
                         gradientUnits="userSpaceOnUse"
                     >
                         <stop stopColor="#945FFE" />
-                        <stop offset="1" stopColor="#0079FF" />
+                        <stop
+                            offset="1"
+                            stopColor="#0079FF"
+                        />
                     </linearGradient>
                     <linearGradient
                         id="paint4_linear_849_1461"
@@ -129,7 +168,10 @@ export const Logo: FC<LogoProps> = ({ text = true, icon = true, light = false, w
                         gradientUnits="userSpaceOnUse"
                     >
                         <stop stopColor="#945FFE" />
-                        <stop offset="1" stopColor="#0079FF" />
+                        <stop
+                            offset="1"
+                            stopColor="#0079FF"
+                        />
                     </linearGradient>
                     <linearGradient
                         id="paint5_linear_849_1461"
@@ -140,7 +182,10 @@ export const Logo: FC<LogoProps> = ({ text = true, icon = true, light = false, w
                         gradientUnits="userSpaceOnUse"
                     >
                         <stop stopColor="#945FFE" />
-                        <stop offset="1" stopColor="#0079FF" />
+                        <stop
+                            offset="1"
+                            stopColor="#0079FF"
+                        />
                     </linearGradient>
                     <linearGradient
                         id="paint6_linear_849_1461"
@@ -151,7 +196,10 @@ export const Logo: FC<LogoProps> = ({ text = true, icon = true, light = false, w
                         gradientUnits="userSpaceOnUse"
                     >
                         <stop stopColor="#945FFE" />
-                        <stop offset="1" stopColor="#0079FF" />
+                        <stop
+                            offset="1"
+                            stopColor="#0079FF"
+                        />
                     </linearGradient>
                     <linearGradient
                         id="paint7_linear_849_1461"
@@ -162,10 +210,18 @@ export const Logo: FC<LogoProps> = ({ text = true, icon = true, light = false, w
                         gradientUnits="userSpaceOnUse"
                     >
                         <stop stopColor="#945FFE" />
-                        <stop offset="1" stopColor="#0079FF" />
+                        <stop
+                            offset="1"
+                            stopColor="#0079FF"
+                        />
                     </linearGradient>
                     <clipPath id="clip0_849_1461">
-                        <rect width="1863" height="402" fill="white" transform="translate(0 103)" />
+                        <rect
+                            width="1863"
+                            height="402"
+                            fill="white"
+                            transform="translate(0 103)"
+                        />
                     </clipPath>
                 </defs>
             </svg>
@@ -174,37 +230,121 @@ export const Logo: FC<LogoProps> = ({ text = true, icon = true, light = false, w
 
     if (text && !icon && !light) {
         return (
-            <svg width={width} height={height} viewBox="0 0 49 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.67928 6.12C7.51128 7.944 5.81928 9.192 3.53928 9.192C1.33128 9.192 -0.144716 7.872 0.0112841 6.06H2.27928C2.21928 6.792 2.85528 7.332 3.79128 7.332C4.54728 7.332 5.08728 6.972 5.12328 6.456C5.18328 5.832 4.43928 5.736 3.52728 5.616C1.77528 5.412 0.155284 4.968 0.335284 2.94C0.491284 1.176 2.12328 0 4.27128 0C6.43128 0 7.89528 1.26 7.73928 3H5.56728C5.62728 2.34 5.03928 1.86 4.18728 1.86C3.45528 1.86 2.91528 2.196 2.87928 2.652C2.81928 3.264 3.53928 3.36 4.47528 3.468C6.17928 3.648 7.84728 4.092 7.67928 6.12Z" fill="url(#paint0_linear_280_2503)" />
-                <path d="M8.56288 8.892L9.30688 0.3H11.9109L11.6229 3.588L14.3349 0.3H17.4069L13.8669 4.356L16.6869 8.892H13.6149L11.4789 5.22L11.1669 8.892H8.56288Z" fill="url(#paint1_linear_280_2503)" />
-                <path d="M20.9303 9.192C18.0383 9.192 16.2623 7.332 16.5023 4.596C16.7423 1.86 18.8543 0 21.7343 0C24.6143 0 26.4023 1.86 26.1623 4.596C25.9223 7.332 23.8103 9.192 20.9303 9.192ZM21.5423 2.208C20.2103 2.208 19.2263 3.18 19.1063 4.596C18.9743 6.012 19.8023 6.972 21.1223 6.984C22.4423 6.984 23.4263 6.012 23.5583 4.596C23.6783 3.18 22.8623 2.208 21.5423 2.208Z" fill="url(#paint2_linear_280_2503)" />
-                <path d="M26.505 0.288001L29.205 0.3L30.465 6.984L32.901 0.3H35.601L32.301 8.892H28.305L26.505 0.288001Z" fill="url(#paint3_linear_280_2503)" />
-                <path d="M38.3657 5.388L38.2337 6.852H41.9777L41.7977 8.892H35.5577L36.3017 0.3H42.4337L42.2537 2.328H38.6297L38.5217 3.636H41.6657L41.5097 5.388H38.3657Z" fill="url(#paint4_linear_280_2503)" />
-                <path d="M48.6126 8.892H42.8646L43.6086 0.3H46.2126L45.6606 6.684H48.8046L48.6126 8.892Z" fill="url(#paint5_linear_280_2503)" />
+            <svg
+                width={width}
+                height={height}
+                viewBox="0 0 49 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M7.67928 6.12C7.51128 7.944 5.81928 9.192 3.53928 9.192C1.33128 9.192 -0.144716 7.872 0.0112841 6.06H2.27928C2.21928 6.792 2.85528 7.332 3.79128 7.332C4.54728 7.332 5.08728 6.972 5.12328 6.456C5.18328 5.832 4.43928 5.736 3.52728 5.616C1.77528 5.412 0.155284 4.968 0.335284 2.94C0.491284 1.176 2.12328 0 4.27128 0C6.43128 0 7.89528 1.26 7.73928 3H5.56728C5.62728 2.34 5.03928 1.86 4.18728 1.86C3.45528 1.86 2.91528 2.196 2.87928 2.652C2.81928 3.264 3.53928 3.36 4.47528 3.468C6.17928 3.648 7.84728 4.092 7.67928 6.12Z"
+                    fill="url(#paint0_linear_280_2503)"
+                />
+                <path
+                    d="M8.56288 8.892L9.30688 0.3H11.9109L11.6229 3.588L14.3349 0.3H17.4069L13.8669 4.356L16.6869 8.892H13.6149L11.4789 5.22L11.1669 8.892H8.56288Z"
+                    fill="url(#paint1_linear_280_2503)"
+                />
+                <path
+                    d="M20.9303 9.192C18.0383 9.192 16.2623 7.332 16.5023 4.596C16.7423 1.86 18.8543 0 21.7343 0C24.6143 0 26.4023 1.86 26.1623 4.596C25.9223 7.332 23.8103 9.192 20.9303 9.192ZM21.5423 2.208C20.2103 2.208 19.2263 3.18 19.1063 4.596C18.9743 6.012 19.8023 6.972 21.1223 6.984C22.4423 6.984 23.4263 6.012 23.5583 4.596C23.6783 3.18 22.8623 2.208 21.5423 2.208Z"
+                    fill="url(#paint2_linear_280_2503)"
+                />
+                <path
+                    d="M26.505 0.288001L29.205 0.3L30.465 6.984L32.901 0.3H35.601L32.301 8.892H28.305L26.505 0.288001Z"
+                    fill="url(#paint3_linear_280_2503)"
+                />
+                <path
+                    d="M38.3657 5.388L38.2337 6.852H41.9777L41.7977 8.892H35.5577L36.3017 0.3H42.4337L42.2537 2.328H38.6297L38.5217 3.636H41.6657L41.5097 5.388H38.3657Z"
+                    fill="url(#paint4_linear_280_2503)"
+                />
+                <path
+                    d="M48.6126 8.892H42.8646L43.6086 0.3H46.2126L45.6606 6.684H48.8046L48.6126 8.892Z"
+                    fill="url(#paint5_linear_280_2503)"
+                />
                 <defs>
-                    <linearGradient id="paint0_linear_280_2503" x1="1.5" y1="8" x2="45" y2="6.5" gradientUnits="userSpaceOnUse">
+                    <linearGradient
+                        id="paint0_linear_280_2503"
+                        x1="1.5"
+                        y1="8"
+                        x2="45"
+                        y2="6.5"
+                        gradientUnits="userSpaceOnUse"
+                    >
                         <stop stopColor="#2D388A" />
-                        <stop offset="1" stopColor="#00AEEF" />
+                        <stop
+                            offset="1"
+                            stopColor="#00AEEF"
+                        />
                     </linearGradient>
-                    <linearGradient id="paint1_linear_280_2503" x1="1.5" y1="8" x2="45" y2="6.5" gradientUnits="userSpaceOnUse">
+                    <linearGradient
+                        id="paint1_linear_280_2503"
+                        x1="1.5"
+                        y1="8"
+                        x2="45"
+                        y2="6.5"
+                        gradientUnits="userSpaceOnUse"
+                    >
                         <stop stopColor="#2D388A" />
-                        <stop offset="1" stopColor="#00AEEF" />
+                        <stop
+                            offset="1"
+                            stopColor="#00AEEF"
+                        />
                     </linearGradient>
-                    <linearGradient id="paint2_linear_280_2503" x1="1.5" y1="8" x2="45" y2="6.5" gradientUnits="userSpaceOnUse">
+                    <linearGradient
+                        id="paint2_linear_280_2503"
+                        x1="1.5"
+                        y1="8"
+                        x2="45"
+                        y2="6.5"
+                        gradientUnits="userSpaceOnUse"
+                    >
                         <stop stopColor="#2D388A" />
-                        <stop offset="1" stopColor="#00AEEF" />
+                        <stop
+                            offset="1"
+                            stopColor="#00AEEF"
+                        />
                     </linearGradient>
-                    <linearGradient id="paint3_linear_280_2503" x1="1.5" y1="8" x2="45" y2="6.5" gradientUnits="userSpaceOnUse">
+                    <linearGradient
+                        id="paint3_linear_280_2503"
+                        x1="1.5"
+                        y1="8"
+                        x2="45"
+                        y2="6.5"
+                        gradientUnits="userSpaceOnUse"
+                    >
                         <stop stopColor="#2D388A" />
-                        <stop offset="1" stopColor="#00AEEF" />
+                        <stop
+                            offset="1"
+                            stopColor="#00AEEF"
+                        />
                     </linearGradient>
-                    <linearGradient id="paint4_linear_280_2503" x1="1.5" y1="8" x2="45" y2="6.5" gradientUnits="userSpaceOnUse">
+                    <linearGradient
+                        id="paint4_linear_280_2503"
+                        x1="1.5"
+                        y1="8"
+                        x2="45"
+                        y2="6.5"
+                        gradientUnits="userSpaceOnUse"
+                    >
                         <stop stopColor="#2D388A" />
-                        <stop offset="1" stopColor="#00AEEF" />
+                        <stop
+                            offset="1"
+                            stopColor="#00AEEF"
+                        />
                     </linearGradient>
-                    <linearGradient id="paint5_linear_280_2503" x1="1.5" y1="8" x2="45" y2="6.5" gradientUnits="userSpaceOnUse">
+                    <linearGradient
+                        id="paint5_linear_280_2503"
+                        x1="1.5"
+                        y1="8"
+                        x2="45"
+                        y2="6.5"
+                        gradientUnits="userSpaceOnUse"
+                    >
                         <stop stopColor="#2D388A" />
-                        <stop offset="1" stopColor="#00AEEF" />
+                        <stop
+                            offset="1"
+                            stopColor="#00AEEF"
+                        />
                     </linearGradient>
                 </defs>
             </svg>
@@ -216,7 +356,13 @@ export const Logo: FC<LogoProps> = ({ text = true, icon = true, light = false, w
     }
 
     if (!text && icon && light) {
-        return <img src="/img/logo-rounded.png" width={width} height={height} />;
+        return (
+            <img
+                src="/img/logo-rounded.png"
+                width={width}
+                height={height}
+            />
+        );
     }
 
     if (text && !icon && light) {

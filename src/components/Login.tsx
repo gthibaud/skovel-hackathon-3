@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { auth } from '@/api/firebase';
 import { TextField } from '@mui/material';
@@ -18,7 +18,7 @@ export const Login = () => {
         setLoading(true);
 
         signInWithEmailAndPassword(auth, email, password)
-            .catch(error => {
+            .catch((error) => {
                 setLoginMessage('Invalid username/password.');
             })
             .finally(() => {
@@ -27,15 +27,17 @@ export const Login = () => {
     };
 
     const resetPassword = () => {
-        sendPasswordResetEmail(auth, email).then(() => {
-            setLoginMessage('Password reset email sent.');
-        }).catch((error) => {
-            setLoginMessage('Error sending password reset email.');
-        });
-    }
+        sendPasswordResetEmail(auth, email)
+            .then(() => {
+                setLoginMessage('Password reset email sent.');
+            })
+            .catch((error) => {
+                setLoginMessage('Error sending password reset email.');
+            });
+    };
 
     return (
-        <form style={{ display: 'flex', gap: "8px", flexDirection: "column" }} >
+        <form style={{ display: 'flex', gap: '8px', flexDirection: 'column' }}>
             <TextField
                 type="text"
                 label="Enter your Email"
@@ -47,19 +49,31 @@ export const Login = () => {
                 onChange={(e) => setPassword(e.target.value)}
             />
             {loginMessage && (
-                <div className="alert alert-danger" role="alert">
+                <div
+                    className="alert alert-danger"
+                    role="alert"
+                >
                     <span
                         className="glyphicon glyphicon-exclamation-sign"
                         aria-hidden="true"
                     />
                     <span className="sr-only">Error:</span>
                     &nbsp;{loginMessage}{' '}
-                    <a href="#" onClick={resetPassword} className="alert-link">
+                    <a
+                        href="#"
+                        onClick={resetPassword}
+                        className="alert-link"
+                    >
                         Forgot Password?
                     </a>
                 </div>
             )}
-            <Button onClick={handleSubmit} isLoading={loading} >Login</Button>
+            <Button
+                onClick={handleSubmit}
+                isLoading={loading}
+            >
+                Login
+            </Button>
         </form>
     );
 };

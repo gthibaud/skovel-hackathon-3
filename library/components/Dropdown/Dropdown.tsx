@@ -71,8 +71,9 @@ export const Dropdown: FC<DropdownProps> = ({
                                     color: 'text.secondary',
                                     fontSize: '10px',
                                     opacity: '0.8',
-                                    transform: `rotate(${e?.className.includes('Open') ? '180' : '0'
-                                        }deg)`,
+                                    transform: `rotate(${
+                                        e?.className.includes('Open') ? '180' : '0'
+                                    }deg)`,
                                     transition: 'transform 0.1s linear',
                                     pointerEvents: 'none',
                                     position: 'absolute',

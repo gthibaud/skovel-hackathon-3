@@ -81,8 +81,8 @@ export const Typography: FC<TypographyProps> = (props) => {
                 color: isError
                     ? theme.colors.text.negative
                     : isThemeColor(color)
-                    ? theme.colors.text[color as keyof Theme['colors']['text']]
-                    : color,
+                      ? theme.colors.text[color as keyof Theme['colors']['text']]
+                      : color,
                 fontWeight: generateWeight(props, fontWeightMap[variant] || DEFAULT_FONT_WEIGHT),
                 fontSize: generateFontSize(props, fontSizeMap[variant] || DEFAULT_FONT_SIZE),
                 marginTop: generateMarginTop(props, 0),

@@ -114,8 +114,8 @@ export const PageWrapper: FC<PageWrapperProps> = ({
                 paddingBottom: mediumLayout
                     ? `calc(env(safe-area-inset-bottom) + ${footerHeight}px)`
                     : fixedLayout
-                    ? 0
-                    : 22,
+                      ? 0
+                      : 22,
                 // height: fixedLayout ? '100vh' : 'min-content', // Add a padding to avoid the navbar to hide the content
                 // width: '-webkit-fill-available',
                 // paddingTop: fullPage ? '0px' : '16px',

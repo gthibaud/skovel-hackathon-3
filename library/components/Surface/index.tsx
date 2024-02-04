@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
-"use client"
+'use client';
 
 import { Interpolation, useTheme } from '@emotion/react';
 import type { CSSProperties, FC } from 'react';

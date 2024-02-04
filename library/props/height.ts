@@ -29,7 +29,10 @@ export const generateHeight = (props: HeightProps, defaultHeight: string = 'inhe
     return height || defaultHeight;
 };
 
-export const generateMaxHeight = (props: HeightProps, defaultMaxHeight: string = 'auto'): string => {
+export const generateMaxHeight = (
+    props: HeightProps,
+    defaultMaxHeight: string = 'auto',
+): string => {
     const { maxHeight } = props;
     const theme = useTheme();
 

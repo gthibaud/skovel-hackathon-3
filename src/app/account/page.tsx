@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { auth } from '@/api/firebase';
 import { Login } from '@/components/Login';
@@ -32,4 +32,4 @@ export default function Account() {
             {user ? <UserInfos user={user} /> : <Login />}
         </main>
     );
-};
+}

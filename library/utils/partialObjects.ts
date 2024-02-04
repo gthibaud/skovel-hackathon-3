@@ -5,8 +5,8 @@ export type DeepPartial<T> = {
     [P in keyof T]?: T[P] extends (infer U)[]
         ? DeepPartial<U>[]
         : T[P] extends object
-        ? DeepPartial<T[P]>
-        : T[P];
+          ? DeepPartial<T[P]>
+          : T[P];
 };
 
 export function mergeObjects<T>(target: T, partial: DeepPartial<T>): T {

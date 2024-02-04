@@ -13,13 +13,13 @@ interface ActionButtonDoubleProps {
     cancelStartIcon?: JSX.Element;
     submitStartIcon?: JSX.Element;
     submitButtonColor?:
-    | 'primary'
-    | 'secondary'
-    | 'error'
-    | 'info'
-    | 'success'
-    | 'warning'
-    | undefined;
+        | 'primary'
+        | 'secondary'
+        | 'error'
+        | 'info'
+        | 'success'
+        | 'warning'
+        | undefined;
     additionalElements?: JSX.Element;
 }
 

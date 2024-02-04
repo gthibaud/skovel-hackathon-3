@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import Link from 'next/link';
 import './styles.css';
@@ -32,15 +32,13 @@ export default function Return() {
         return (
             <main>
                 <h1>An error occured during checkout</h1>
-                <Link href='/register'>Retry</Link>
+                <Link href="/register">Retry</Link>
             </main>
-        )
+        );
     }
 
     if (status === 'open') {
-        return (
-            redirect('/')
-        )
+        return redirect('/');
     }
 
     if (status === 'complete') {
@@ -49,16 +47,20 @@ export default function Return() {
                 <header>
                     <h1>Félicitations !</h1>
                 </header>
-                <div className='bento'>
-                    <div className='bento-card'>
+                <div className="bento">
+                    <div className="bento-card">
                         <h3>Votre paiement a bien été enregistré</h3>
-                        <p>Price: <b>150€</b></p>
-                        <p>Email: <b>{customerEmail}</b></p>
+                        <p>
+                            Price: <b>150€</b>
+                        </p>
+                        <p>
+                            Email: <b>{customerEmail}</b>
+                        </p>
                         <p>N&apos;oubliez pas de nous transmettre votre certificat médical !</p>
                     </div>
                 </div>
             </main>
-        )
+        );
     }
 
     return null;

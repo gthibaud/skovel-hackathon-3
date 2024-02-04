@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
-'use client'
+'use client';
 
 import { FC } from 'react';
 import './PulsingDot.css';

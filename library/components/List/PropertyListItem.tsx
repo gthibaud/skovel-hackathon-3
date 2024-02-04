@@ -102,8 +102,8 @@ export const PropertyListItem: FC<PropertyListItemProps> = (props) => {
                                     const v = value
                                         ? value.toString()
                                         : valueJSX
-                                        ? valueJSX?.toString()
-                                        : '';
+                                          ? valueJSX?.toString()
+                                          : '';
                                     share(v);
                                 }}
                             >

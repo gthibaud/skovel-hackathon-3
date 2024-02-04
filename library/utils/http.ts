@@ -17,7 +17,7 @@ export const formatURI = (
 ): string => {
     // Get the base url from env variables
     // let url = import.meta.env.VITE_OWLGRID_SERVICES_HOST;
-    let url = ""
+    let url = '';
 
     // The URL is different depending on the domain
     switch (domain) {
@@ -66,5 +66,11 @@ export const formatHeaders = (accessToken?: string): object => {
  * @returns Error message
  */
 export const formatErrorMessage = (error: any): string => {
-    return error?.response?.data?.data?.details?.message || error?.response?.data?.data?.details?.name || error?.response?.data?.data?.message || error?.message || 'Something went wrong'
+    return (
+        error?.response?.data?.data?.details?.message ||
+        error?.response?.data?.data?.details?.name ||
+        error?.response?.data?.data?.message ||
+        error?.message ||
+        'Something went wrong'
+    );
 };

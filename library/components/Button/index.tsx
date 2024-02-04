@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
-'use client'
+'use client';
 
 import { isThemeColor } from '@/theme/themeBase';
 import { Interpolation, Theme, useTheme } from '@emotion/react';
@@ -218,8 +218,8 @@ export const Button: FC<ButtonProps> = (props) => {
                 onClick
                     ? onClick(e)
                     : to.startsWith('http') || to.startsWith('mailto')
-                        ? window.open(to, '_blank')
-                        : router.push(to);
+                      ? window.open(to, '_blank')
+                      : router.push(to);
             }}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}

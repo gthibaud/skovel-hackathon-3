@@ -58,7 +58,7 @@ export const isUnderBreakpoint = (
 
         return width <= breakpoints;
     }
-    return false
+    return false;
 };
 
 export const isOverBreakpoint = (
@@ -66,7 +66,6 @@ export const isOverBreakpoint = (
     breakpoint: keyof Theme['breakpoints']['values'] | number,
 ) => {
     if (typeof window !== 'undefined') {
-
         if (width === undefined) return false;
 
         if (typeof breakpoint === 'number') return width >= breakpoint;
@@ -75,5 +74,5 @@ export const isOverBreakpoint = (
 
         return width > breakpoints;
     }
-    return false
+    return false;
 };

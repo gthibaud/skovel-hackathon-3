@@ -10,13 +10,13 @@ interface ActionButtonSimpleProps {
     submitLabel?: string;
     submitStartIcon?: JSX.Element;
     submitButtonColor?:
-    | 'primary'
-    | 'secondary'
-    | 'error'
-    | 'info'
-    | 'success'
-    | 'warning'
-    | undefined;
+        | 'primary'
+        | 'secondary'
+        | 'error'
+        | 'info'
+        | 'success'
+        | 'warning'
+        | undefined;
     parentType?: 'card' | 'dialog';
     align?: 'left' | 'right';
 }
